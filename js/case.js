@@ -36,11 +36,14 @@ document.getElementById("btn-case-plus").addEventListener("click", function(){
     const  newCaseNumber= caseNumberField(true);
 
     updateCaseTotalPrice(newCaseNumber)
+ currentSubTotal();
      
 })
 
 document.getElementById("btn-case-minus").addEventListener("click",function(){
     const  newCaseNumber= caseNumberField(false);
     updateCaseTotalPrice(newCaseNumber)
+ currentSubTotal();
+
     
 })
