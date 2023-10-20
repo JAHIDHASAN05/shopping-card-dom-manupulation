@@ -25,6 +25,13 @@ function updateCaseTotalPrice(newCaseNumber){
     caseTotalPrice.innerText=newCasePrice;
 }
 
+
+
+
+
+
+
+
 document.getElementById("btn-case-plus").addEventListener("click", function(){
     const  newCaseNumber= caseNumberField(true);
 
