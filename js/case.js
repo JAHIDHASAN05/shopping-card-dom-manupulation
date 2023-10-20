@@ -19,17 +19,21 @@ function caseNumberField(isIncrease){
 }
 
 
-document.getElementById("btn-case-plus").addEventListener("click", function(){
-    const  newCaseNumber= caseNumberField(true);
+function updateCaseTotalPrice(newCaseNumber){
     const newCasePrice=newCaseNumber*59;
     const caseTotalPrice=document.getElementById("case-total-price")
     caseTotalPrice.innerText=newCasePrice;
+}
+
+document.getElementById("btn-case-plus").addEventListener("click", function(){
+    const  newCaseNumber= caseNumberField(true);
+
+    updateCaseTotalPrice(newCaseNumber)
      
 })
 
 document.getElementById("btn-case-minus").addEventListener("click",function(){
     const  newCaseNumber= caseNumberField(false);
-     const newCasePrice=newCaseNumber*59;
-     const caseTotalPrice=document.getElementById("case-total-price")
-     caseTotalPrice.innerText=newCasePrice;
+    updateCaseTotalPrice(newCaseNumber)
+    
 })
